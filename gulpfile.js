@@ -9,10 +9,6 @@ const styles = require('./gulp-tasks/styles');
 const tasks = gulp.parallel(
   html,
   styles,
-/*   script,
-  fonts,
-  imageMinify,
-  svgSprite */
 );
 const build = gulp.series(clean, tasks);
 
