@@ -1,0 +1,19 @@
+{
+  "name": "gulp-internship-2020",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klayder/gulp-build.git"
+  },
+  "author": "A.Sorokin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/klayder/gulp-build/issues"
+  },
+  "homepage": "https://github.com/klayder/gulp-build#readme"
+}
