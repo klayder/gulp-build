@@ -6,8 +6,9 @@
   "scripts": {
     "build": "gulp build",
     "start": "gulp start",
-    "stylelint": "stylelint **/*.scss",
-    "test": "npm run stylelint"
+    "htmlhint": "htmlhint src/**/*.html",
+    "stylelint": "stylelint src/**/*.scss",
+    "test": "npm run stylelint & npm run htmlhint"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
     "gulp-sourcemaps": "2.6.5",
     "gulp-stylelint": "13.0.0",
     "gulp-w3c-html-validator": "2.0.1",
+    "htmlhint": "0.14.1",
     "husky": "4.2.5",
     "node-sass": "4.14.1",
     "stylelint": "13.6.1",
