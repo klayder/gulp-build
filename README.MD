@@ -71,7 +71,7 @@ To start local server execute script
 ```
 
 
-## Hits
+## Hints
 * ### To prevent loading into the remote repository code with style errors, install *husky* and setup pre-commit hooks
 *required packages:*
 ```sh
