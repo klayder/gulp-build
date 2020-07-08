@@ -1,8 +1,10 @@
 
 const gulp = require('gulp')
 
-const styles = require('./styles');
 const html = require('./html');
+const fonts = require('./fonts');
+const styles = require('./styles');
+const images = require('./images');
 
 const server = require('browser-sync').create();
 
@@ -19,8 +21,18 @@ module.exports = function serve(cb) {
         cors: true
     })
 
-    gulp.watch('src/**/*.scss', gulp.series(styles, cb => gulp.src('build/css').pipe(server.stream()).on('end', cb)))
-    gulp.watch('src/**/*.html', gulp.series(html, readyReload))
+    gulp.watch(
+      'src/**/*.scss',
+      gulp.series(
+        styles, cb => gulp.src('build/css').pipe(server.stream()).on('end', cb)
+      )
+    );
+    gulp.watch(
+      'src/images/**/*.{gif,png,jpg,svg,webp}',
+      gulp.series(images, readyReload)
+    );
+    gulp.watch('src/fonts/*', gulp.series(fonts, readyReload));
+    gulp.watch('src/**/*.html', gulp.series(html, readyReload));
 
     return cb()
 }
