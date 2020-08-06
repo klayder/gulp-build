@@ -7,12 +7,14 @@ const serve = require('./gulp-tasks/serve');
 const clean = require('./gulp-tasks/clean');
 const images = require('./gulp-tasks/images');
 const styles = require('./gulp-tasks/styles');
+const scripts = require('./gulp-tasks/scripts');
 
 const tasks = gulp.parallel(
   html,
   fonts,
   styles,
   images,
+  scripts,
 );
 const build = gulp.series(clean, tasks);
 

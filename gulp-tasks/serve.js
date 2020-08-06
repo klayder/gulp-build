@@ -5,6 +5,7 @@ const html = require('./html');
 const fonts = require('./fonts');
 const styles = require('./styles');
 const images = require('./images');
+const scripts = require('./scripts');
 
 const server = require('browser-sync').create();
 
@@ -25,6 +26,12 @@ module.exports = function serve(cb) {
       'src/**/*.scss',
       gulp.series(
         styles, cb => gulp.src('build/css').pipe(server.stream()).on('end', cb)
+      )
+    );
+    gulp.watch(
+      'src/**/*.js',
+      gulp.series(
+        scripts, cb => gulp.src('build/js').pipe(server.stream()).on('end', cb)
       )
     );
     gulp.watch(
